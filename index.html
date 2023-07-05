@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Average age</title>
+</head>
+<!-- The aim is to calculate the average age from of all the people from the array. Each time the form submits a new person is added to the array. Feel free to take it further if you would like to. -->
+<body>
+
+    <!-- we are building a form that collects the users' name and age and 'I consent' field for a medical study -->
+    <main>
+        <form id="application-form" onsubmit="completeForm(event)">
+            <h1>Average age calculator</h1>
+            <p>Please complete this form to take part in the medical study.</p>
+            <!-- name -->
+            <div class="form-row">
+                <label for="fullName">Full name:</label>
+                <input type="text" name="fullName" id="fullName" required>
+            </div>
+            <!-- age -->
+            <div class="form-row">
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" required>
+            </div>
+            <!-- email -->
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <!-- consent -->
+            <div class="consent">
+                <p>I have read the terms and conditions. I fully understand and consent.</p>
+                <label for="consent">Yes, I consent:</label>
+                <input type="checkbox" name="consent" id="consent" required>
+                <div class="submit-box">
+                    <button type="submit" >Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="people-list-container">
+            <table class="table">
+                <tr class="people-headers">
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                </tr>
+                <tbody id="people-data">
+                </tbody>
+            </table>
+            <div class="average-age-box">Average age: <span id="average-age">N/A</span></div>
+        </div>
+    </main>
+
+</body>
+</html>
